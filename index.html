@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Noah MacRitchie</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+      @media screen and (max-width: 1050px) {
+      .projectText{
+      top: 10%;
+      }
+      }
+      @media screen and (max-width: 900px) {
+      .menuItem{
+      font-size: 16pt;
+      padding-top: 10px;
+      }
+      .projectText{
+      top: 5%;
+      padding-top: 0;
+      }
+      }
+      @media screen and (max-width: 750px) {
+      .menuItem{
+      font-size: 14pt;
+      padding-top: 15px;
+      }
+      .subHeader{
+      padding-bottom: 0.25rem !important;
+      }
+      .projectText{
+      top: 25%;
+      padding-top: 0;
+      }
+      }
+      @media screen and (max-width: 600px) {
+      .largeNav{
+      display: none;
+      }
+      .menu{
+      height: auto;
+      }
+      #smallNav{
+      display: inline-block;
+      }
+      .projectText{
+      top: 15%;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="top">
+      <div id="topTextRow" class="row h-100">
+        <div id="topText" class="col-sm-12 my-auto animated delay-1s rubberBand">
+          <span class="divider">
+          Noah MacRitchie
+          </span>
+          <p class="subSubHeader">
+            Personal Portfolio
+          </p>
+        </div>
+      </div>
+      <div id="topImg">
+      </div>
+      <a href="#nav">
+        <div id="scrollDown">
+          <div class="chevron"></div>
+          <div class="chevron"></div>
+          <div class="chevron"></div>
+        </div>
+      </a>
+    </div>
+    <div id="nav" class="menu">
+      <div class="row noMargin largeNav">
+        <span class="col-1"></span>
+        <a href="#profile" class="menuItem col-2 ">Profile</a>
+        <a href="#projects" class="menuItem col-2">Projects</a>
+        <a href="#skills" class="menuItem col-2">Skills</a>
+        <a href="#experiences" class="menuItem col-2">Experiences</a>
+        <a href="#contactme" class="menuItem col-2">Contact</a>
+      </div>
+      <div id="smallNav">
+        <nav class="navbar navbar-expand-lg navbar-dark ">
+          <button class="navbar-toggler" type="button" onclick="openSmallNav()">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="smallNavLinks" style="display: none;">
+            <div class="container container-fluid">
+              <div class="row" style="border: solid rgba(0, 0, 0, 0.1); border-width: 0px 1px 0px 1px">
+                <a href="#profile" class="smallLinks col-12" style="background-color: rgba(0, 0, 0, 0.1)" >Profile</a>
+                <a href="#projects" class="smallLinks col-12">Projects</a>
+                <a href="#skills" class="smallLinks col-12" style="background-color: rgba(0, 0, 0, 0.1)">Skills</a>
+                <a href="#experiences" class="smallLinks col-12">Experiences</a>
+                <a href="#contactme" class="smallLinks col-12" style="background-color: rgba(0, 0, 0, 0.1)">Contact</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="container">
+      <div id="profile">
+        <span class="sectionHeader" style="color:royalblue;">
+        Profile
+        </span>
+        <span class="subHeader">
+        I'm a software development student 
+        </span>
+        <div class="row">
+          <div class="col-md-4 col-sm-12 margin-top-5 ">
+            <span class="sectionTitle" style="color:royalblue;">
+            About Me
+            </span>
+            I'm a software development student, currently learning Java, JavaScript and C. I love working in a team, learning from everyones experiences and solving complex problems together.    
+          </div>
+          <div class="col-md-4  col-sm-6  col-xs-12 margin-top-5"><img class="rounded-circle img-fluid " id="profilePic"src="./img/NoahsBeautifulFace.jpg"/>
+            <span class="subSubHeader"></span>
+          </div>
+          <div class="information col-md-4 col-sm-6  col-xs-12 vcenter margin-top-5">
+            <span class="sectionTitle" style="color:royalblue;">
+            Details
+            </span>
+            <span class="margin-top-5"><b>Name:</b> Noah MacRitchie</span><br>
+            <span class="margin-top-5"><b>Age:</b> 19</span><br>
+            <span class="margin-top-5"><b>Location:</b> New Westminster, BC, Canada </span><br>
+            <span class="margin-top-5"><b>School:</b> British Columbia Institute of Technology</span><br>
+            <span class="margin-top-5"><b>Program:</b> Computer Systems Technology</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="transitions" style="margin-top:5vh;">
+      <div id="wavesTransition"></div>
+    </div>
+    <div id="projectContainer" class="myContainer ">
+      <div id="fish">
+        <div id="rotateZone">
+          <img id="fishPic" src="./img/fish_00_up.png">
+          <div id="fishEye"></div>
+        </div>
+      </div>
+      <div id="projects">
+        <span style="color: rgba(255, 255, 255, 0.9)"class="sectionHeader">
+        Projects
+        </span>
+        <span style="color: rgba(255, 255, 255, 0.9); border-bottom: 1px solid rgba(255, 255, 255, 0.9)" class="subHeader">
+        "Like everything else, in order for us to be good at something, we have to practice." - <b>Jennifer McAlister</b>
+        </span>
+        <div class="row">
+          <div id="project1" class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 projectImgContainer z2 projectImg "style="padding-top: 15px;" >
+            <div class="projectText" >
+              <div class="projectTitle h2 subHeader" style="padding-bottom: 0.25rem;border-bottom: 1px solid rgba(255, 255, 255, 0.9)">
+                PICKR
+              </div>
+              <div class="projectTags">
+                <span class="tag">ReactJS</span>
+                <span class="tag">Firebase</span>
+              </div>
+            </div>
+            <div class="projectLinks">
+              <a target="_blank" href="https://www.pickr.live/">
+              <img src="img/open_link_icon.png" class="linkIcon">
+              </a>
+              <a target="_blank" href="https://github.com/esuom1/Pickr">
+              <img src="img/github_logo_white.png" class="linkIcon">
+              </a>
+            </div>
+            <img class ="projectImg img-fluid" src="img/project_image_1.png"/>
+          </div>
+          <div id="project2" class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 projectImgContainer z2 "style="padding-top: 15px;">
+            <div class="projectText" >
+              <div class="projectTitle h2 subHeader" style="padding-bottom: 0.25rem;border-bottom: 1px solid rgba(255, 255, 255, 0.9)">
+                FoodKeep
+              </div>
+              <div class="projectTags">
+                <div class="tag" >HTML</div>
+                <div class="tag" >CSS</div>
+                <div class="tag" >JavaScript</div>
+                <div class="tag" >Firebase</div>
+              </div>
+            </div>
+            <div class="projectLinks">
+              <a target="_blank" href="https://github.com/esuom1/FoodKeep">
+              <img src="img/github_logo_white.png" class="linkIcon">
+              </a>
+            </div>
+            <img class ="projectImg img-fluid" src="img/project_image_2.png"/>
+          </div>
+        </div>
+        <div class="row" >
+          <div id="project3" class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 projectImgContainer z2" style="padding-top: 15px;">
+            <div class="projectText" >
+              <div class="projectTitle h2 subHeader" style="padding-bottom: 0.25rem;border-bottom: 1px solid rgba(255, 255, 255, 0.9)">
+                CST Discord Bot
+              </div>
+              <div class="projectTags">
+                <span class="tag" >JavaScript</span>
+                <span class="tag" >SQL Server</span>
+                <span class="tag" >Node.js</span>
+              </div>
+            </div>
+            <div class="projectLinks">
+              <span style="color: white;">Coming Soon</span>
+            </div>
+            <img class ="projectImg img-fluid" src="img/project_image_3.png"/>
+          </div>
+          <div id="project4" class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 projectImgContainer z2" style="padding-top: 15px;">
+            <div class="projectText" >
+              <div class="projectTitle h2 subHeader" style="padding-bottom: 0.25rem;border-bottom: 1px solid rgba(255, 255, 255, 0.9)">
+                BlackJack
+              </div>
+              <div class="projectTags">
+                <span class="tag" >Java</span>
+                <span class="tag" >JavaFx</span>
+              </div>
+            </div>
+            <div class="projectLinks">
+              <span style="color: white;">Coming Soon</span>
+            </div>
+            <img class ="projectImg img-fluid" src="img/project_image_4.png"/>
+          </div>
+          <div id="project5" class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 projectImgContainer z2" style="padding-top: 15px;">
+            <div class="projectText" >
+              <div class="projectTitle h2 subHeader" style="padding-bottom: 0.25rem;border-bottom: 1px solid rgba(255, 255, 255, 0.9)">
+                Fish Tank Simulator
+              </div>
+              <div class="projectTags">
+                <span class="tag" >JavaScript</span>
+                <span class="tag" >HTML</span>
+                <span class="tag" >CSS</span>
+              </div>
+            </div>
+            <div class="projectLinks">
+              <span style="color: white;">Coming Soon</span>
+            </div>
+            <img class ="projectImg img-fluid" src="img/project_image_5.png"/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="transition">
+      <div id="paintDripping"></div>
+    </div>
+    <div id="skills">
+      <div class="container">
+        <span class="sectionHeader" style="color:#6941e1">
+        Skills
+        </span>
+        <span class="subHeader">
+        “Tell me and I forget. Teach me and I remember. Involve me and I learn.” –<b>Benjamin Franklin</b>
+        </span>
+      </div>
+      <div class="container-fluid container"  >
+        <div class="row">
+          <div class="col-4 col-md-4 col-lg-2  col-sm- 4 col-xs-4">
+            <div class="ratingType">
+              Expert<br>
+              <div class="ratings">5</div>
+            </div>
+          </div>
+          <div class="col-4 col-md-4 col-lg-2  col-sm- 4 col-xs-4">
+            <div class="ratingType">
+              Proficient<br>
+              <div class="ratings">4</div>
+            </div>
+          </div>
+          <div class="col-4 col-md-4 col-lg-2  col-sm- 4 col-xs-4">
+            <div class="ratingType">
+              Intermediate<br>
+              <div class="ratings">3</div>
+            </div>
+          </div>
+          <div class="col-4 col-md-4 col-lg-2  col-sm- 4 col-xs-4">
+            <div class="ratingType">
+              Advanced Beginner<br>
+              <div class="ratings">2</div>
+            </div>
+          </div>
+          <div class="col-4 col-md-4 col-lg-2  col-sm- 4 col-xs-4">
+            <div class="ratingType">
+              Novice<br>
+              <div class="ratings">1</div>
+            </div>
+          </div>
+          <div class="col-4 col-md-4 col-lg-2  col-sm- 4 col-xs-4">
+            <div class="ratingType">
+              Noob<br>
+              <div class="ratings">0</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6 col-xs-8">
+            <div class="skillCard">
+              <div id="htmlImage" class="skillImg"></div>
+              <div id="htmlRating" class="skillCardRating">
+                <div class="ratings">
+                  4
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-8">
+            <div class="skillCard">
+              <div id="cssImage" class="skillImg"></div>
+              <div id="cssRating" class="skillCardRating">
+                <div class="ratings">
+                  4
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-8">
+            <div class="skillCard">
+              <div id="jsImage" class="skillImg"></div>
+              <div id="jsRating" class="skillCardRating">
+                <div class="ratings">
+                  3
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-8">
+            <div class="skillCard">
+              <div id="javaImage" class="skillImg"></div>
+              <div id="javaRating" class="skillCardRating">
+                <div class="ratings">
+                  3
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-8">
+            <div class="skillCard">
+              <div id="sqlImage" class="skillImg"></div>
+              <div id="sqlRating" class="skillCardRating">
+                <div class="ratings">
+                  2
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="skillCard">
+              <div id="reactImage" class="skillImg"></div>
+              <div id="reactRating" class="skillCardRating">
+                <div class="ratings">
+                  2
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="skillCard">
+              <div id="bootstrapImage" class="skillImg"></div>
+              <div id="bootstrapRating" class="skillCardRating">
+                <div class="ratings">
+                  3
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="skillCard">
+              <div id="firebaseImage" class="skillImg"></div>
+              <div id="firebaseRating" class="skillCardRating">
+                <div class="ratings">
+                  3
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="skillCard">
+              <div id="cImage" class="skillImg"></div>
+              <div id="cRating" class="skillCardRating">
+                <div class="ratings">
+                  1
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="transition">
+      <div id="orangeFlame"></div>
+    </div>
+    <div id="experiences" >
+      <div class="container">
+        <div class="sectionHeader">
+          Experiences
+        </div>
+        <span class="subHeader" style="border-bottom-color: #9c3a19">
+        “The only source of knowledge is experience.” –<b> Albert Einstein</b>
+        </span>
+        <div class="row">
+          <div class="col-md-5 col-xs-12">
+            <span class="experienceSection">Education</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-5 col-xs-12">
+            <span class="experienceLocation">British Colombia Institute of Technology</span>
+            <span class="experienceDate">Jan 2019 - Present</span>
+          </div>
+          <div class="col-md-7 col-xs-12">
+            <span class="experienceDesc">Diploma - Computer Systems Technology</span>
+            <span class="experienceText">So far we have focuses on java based programming, but I also learned about 
+            HTML, CSS, JavaScript, React.js and more. We have had oportunities to work in teams to
+            create some awesome projects. In future classes I'll get the chance learn C, C++ and more. </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-5 col-xs-12">
+            <span class="experienceLocation">New Westminster Secondary School</span>
+            <span class="experienceDate">Sept 2013 - June 2018</span>
+          </div>
+          <div class="col-md-7 col-xs-12">
+            <span class="experienceDesc">High School</span>
+            <span class="experienceText">While in high school I enjoyed learning about Math, Science and Programming.
+            My first experience with programming was an information technology course in the 9th grade where I learned the basics of
+            HTML and C++. My interest in programming grew larger after taking a "Work Experience" course where I spent a few weeks working
+            with the "Spittin Image Software" team.</span>
+          </div>
+        </div>
+        <span class="subHeader" style="border-bottom-color: #9c3a19">
+        </span>
+        <div class="row">
+          <div class="col-md-5 col-xs-12">
+            <span class="experienceSection">Work</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-5 col-xs-12">
+            <span class="experienceLocation">Q to Q Ferry</span>
+            <span class="experienceDate">Aug 2018 - December 2018</span>
+          </div>
+          <div class="col-md-7 col-xs-12">
+            <span class="experienceDesc">Deckhand</span>
+            <span class="experienceText">
+            I had a blast working with the Q to Q ferry team where I
+            supervised the safety of up to 12 passengers on a 28-foot passenger ferry, 
+            collected their fares and pet their dogs. I would tie the ferry to the dock to ensure that
+            the boat would stay steady so that everyone could step off of the boat safely.
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-5 col-xs-12">
+            <span class="experienceLocation">Spitting Image Software</span>
+            <span class="experienceDate">Oct 2017 - December 2017</span>
+          </div>
+          <div class="col-md-7 col-xs-12">
+            <span class="experienceDesc">Volunteer | Student</span>
+            <span class="experienceText">During a "work experience" course in high school where students would volunteer in different industries
+            they were interested in, I got the chance to spend some time at Spittin Image Software. I would go in twice a week for a few hours
+            spending time on small tasks they gave me to help me learn JavaScript. I built a simple calculator and a program that would plot a list
+            of addresses onto a map using google maps api.
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-5 col-xs-12">
+            <span class="experienceLocation">The Aquabus</span>
+            <span class="experienceDate">May 2017 - August 2017</span>
+          </div>
+          <div class="col-md-7 col-xs-12">
+            <span class="experienceDesc">Deckhand</span>
+            <span class="experienceText">
+            I spent the summer before senior year working at the Aquabus. I would collect the fares of up to 30 passengers
+            at a time while ensuring the safety of everyone on board.  I loved how social the aquabus was, I got to
+            talk to my driver, locals and tourists all day long all while enjoying the beatiful view of Vancouver.
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-5 col-xs-12">
+            <span class="experienceLocation">Mcdonalds</span>
+            <span class="experienceDate">Sept 2015 - Febuary 2017</span>
+          </div>
+          <div class="col-md-7 col-xs-12">
+            <span class="experienceDesc">Crew Member</span>
+            <span class="experienceText">
+            My first true work experience was at one of the local Mcdonalds, when I was 15.
+            I worked at the front end so I would be the cashier, drive thru attendant, make coffees,
+            fries, pies, desserts and more. It was a great experience working in a team because
+            you needed to constantly communicate with each other to ensure everyones orders could be completed in a timly fashion.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contactme" style="background-color:  #001f3f">
+      <div class="transition">
+        <div id="orange_cloud"></div>
+      </div>
+      <div class="sectionHeader" style="color: rgba(255, 255, 255, 0.8);">Contact Me</div>
+      <div id="contactSpotLight">
+        <span class="contactText">Get in touch at:</span>
+      </div>
+      <div class="row">
+        <div id="contact_buttons" class="">
+          <a style="display: none;" target="_blank" href="" id="" class="contact_button">
+          <img class="button_logos"src="./img/email_logo.png">
+          <span  class="contact_button_texts"> </span>
+          </a>
+          <a target="_blank" href="https://github.com/noahmacritchie" id="githubContact" class="contact_button">
+          <img class="button_logos"src="./img/github_logo.png">
+          <span id="githubText" class="contact_button_texts"> </span>
+          </a>
+          <a target="_blank" href="https://www.linkedin.com/in/noahmacritchie/" id="linkedinContact" class="contact_button">
+          <img class="button_logos"src="./img/linkedin_logo.png">
+          <span  class="contact_button_texts"></span>
+          </a>
+          <a target="_blank" id="emailContact" onclick="copyEmail()" class="contact_button">
+          <img class="button_logos"src="./img/email_logo.png">
+          <span  class="contact_button_texts"> </span>
+          </a>
+        </div>
+        <input style=" position: absolute; bottom:0px; left: -60px; z-index: -100;" type="text" value="macritchienoah@gmail.com" id="myInput">
+      </div>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/stickyMenu.js"></script>
+    <script src="js/fishy.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/skills.js"></script>
+  </body>
+</html>
